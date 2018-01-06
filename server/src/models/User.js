@@ -3,8 +3,6 @@ const bcrypt = Promise.promisifyAll(require('bcrypt-nodejs'))
 
 function hashPassword (user, options) {
   const SALT_FACTOR = 8
-  console.log('dinamo')
-
 
   if (!user.changed('password')) {
     return
